@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Install Checkra1n</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff; /* Inverted background */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #000000; /* Black text for better readability on white background */
+        }
+        .loading-container, .jailbreak-container {
+            text-align: center;
+            display: none; /* Hide containers initially */
+        }
+        .jailbreak-container {
+            display: flex; /* Show the jailbreak container initially */
+            flex-direction: column;
+            align-items: center;
+            color: #000000; /* Black text */
+        }
+        .checkra1n-logo {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 20px;
+        }
+        .jailbreak-button {
+            padding: 15px 30px;
+            background-color: #007bff; /* Blue button */
+            color: #ffffff; /* White text on the button */
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .jailbreak-button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+        .loading-container {
+            color: #000000; /* Black text */
+        }
+        .checkra1n-logo-install {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 30px;
+        }
+        .progress-bar {
+            width: 250px;
+            height: 6px;
+            background-color: rgba(0, 0, 0, 0.2); /* Light black progress bar background */
+            border-radius: 3px;
+            overflow: hidden;
+            margin: 0 auto 20px;
+        }
+        .progress {
+            width: 50%;
+            height: 100%;
+            background-color: #000000; /* Black progress bar */
+            border-radius: 3px 0 0 3px;
+            animation: load 60s infinite ease-in-out;
+        }
+        @keyframes load {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+        .status-text {
+            font-size: 14px;
+            opacity: 0.8;
+            color: #000000; /* Black text */
+        }
+    </style>
+</head>
+<body>
+    <div class="jailbreak-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Checkra1n_icon_logo.png" alt="Checkra1n Logo" class="checkra1n-logo">
+        <button class="jailbreak-button" onclick="startInstall()">Jailbreak</button>
+    </div>
+
+    <div class="loading-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Checkra1n_icon_logo.png" alt="Checkra1n Logo" class="checkra1n-logo-install">
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+        <div class="status-text">Installing Checkra1n...</div>
+    </div>
+
+    <script>
+        function startInstall() {
+            document.querySelector('.jailbreak-container').style.display = 'none';
+            document.querySelector('.loading-container').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
